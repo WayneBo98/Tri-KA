@@ -1,4 +1,4 @@
-# Tri-KA: Tri-level Knowledge Anchoring Test-Time Adaptation for Source-free Cross-site MRI Rectal Cancer Segmentation
+# Tri-KA: Tri-level Knowledge Anchoring Test-Time Adaptation for Source-Free Cross-Site MRI Rectal Cancer Segmentation
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 [![PyTorch](https://img.shields.io/badge/PyTorch-%23EE4C2C.svg?style=flat&logo=PyTorch&logoColor=white)](https://pytorch.org/)
@@ -6,7 +6,7 @@
 This repository contains the official PyTorch implementation of the **Tri-KA** framework, as detailed in our MICCAI 2026 paper. Tri-KA is a privacy-preserving Test-Time Adaptation (TTA) method designed to tackle severe domain shifts in cross-site 3D medical image segmentation (e.g., highly anisotropic sagittal rectal cancer MRI).
 
 ## 💡 Overview
-Generic TTA methods often cause semantic drift and structural distortion when applied to 3D medical networks like nnU-Net. To address this under strict patient privacy constraints, Tri-KA safely distills and transmits highly compressed, non-identifiable source priors across three dimensions (Input-Level Style, Feature-Level Semantics, Output-Level Distribution). During deployment, it leverages a novel **Deep-to-Shallow** guidance mechanism to adapt to target domain textures while securely anchoring invariant anatomical topologies.
+Generic TTA methods often cause semantic drift and structural distortion when applied to 3D medical networks like nnU-Net. To address this under strict patient privacy constraints, Tri-KA safely distills and transmits highly compressed, non-identifiable source priors across three dimensions (Input-Level Style, Feature-Level Semantics, Output-Level Distribution). During deployment, it leverages a **Deep-to-Shallow** guidance mechanism to adapt to target domain textures while securely anchoring invariant anatomical topologies.
 
 ## ⚙️ Prerequisites
 Ensure your environment satisfies the following dependencies:
@@ -71,16 +71,4 @@ python evaluation.py \
     --tta_root ./results/tri_ka_adapted \
     --gt_dir /path/to/target/labelsTs \
     --output_dir ./evaluation_results
-```
-
-## 📝 Citation
-If you find this code or our conceptual framework useful in your research, please consider citing our paper:
-```bibtex
-@inproceedings{wang2026trika,
-  title={Tri-KA: Tri-level Knowledge Anchoring Test-Time Adaptation for Source-Free Cross-Site MRI Rectal Cancer Segmentation},
-  author={Wang, Bo and Xue, Ting and Pan, Leyang and Huang, Dingfu and Liu, Zaiyi and Liu, Shiyuan and Zhou, Shaohua Kevin},
-  booktitle={Medical Image Computing and Computer Assisted Intervention -- MICCAI 2026},
-  year={2026},
-  publisher={Springer Nature Switzerland}
-}
 ```
