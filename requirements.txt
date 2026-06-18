@@ -1,0 +1,10 @@
+torch>=2.0.0
+torchvision
+numpy
+pandas
+scipy
+scikit-learn
+SimpleITK
+medpy
+tqdm
+nnunetv2
